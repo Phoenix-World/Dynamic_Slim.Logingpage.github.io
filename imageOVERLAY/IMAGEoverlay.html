@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IMAGEoverlay</title>
+	
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="OVERLAY.css">
+</head>
+
+<body>
+	<header>
+		<h4 id="date"></h4>
+		<h3 id="showClock"></h3>
+	</header>
+	
+	<h1>Welcome to MAGIC.com</h1>
+	
+<div class="parent_div">
+	
+	<div class="child_div">
+		<div class="info">
+			
+			<form id="form">
+				FULL NAME :-
+				<br>
+				<input type="text" class="box" name="fullname" autocomplete="off" placeholder="Write your full name...">
+				<br><br>
+				
+				<div class="input-box">
+				E-MAIL ID :-
+				<br>
+				<input type="email" class="box" name="mail" autocomplete="off" placeholder="Write your mail id..." id="email">
+				<span class="indicator"></span>
+				</div>
+				<br><br>
+				
+				<div class="input-box">
+				PASSWORD :-
+				<br>
+				<input type="password" class="box" name="password" minlength="8" placeholder="Minimum 8 characters..." id="password">
+				<span class="indicator2"></span>
+			</div>
+			</form>
+			
+			<br><br>
+			<button type="button"><a href="CardHover.html">Submit</a></button>
+			<button type="button"><a href="GoodBye.html">Good Bye</a></button>
+			
+		</div>
+	</div>
+	</div>
+	
+	<script type="text/javascript">
+		var d = new Date();
+	document.getElementById("date").innerHTML= d.toDateString();	
+
+
+const clocktime =()=>{
+	var e = new Date();
+	document.getElementById("showClock").innerHTML= e.toLocaleTimeString();
+	setInterval(clocktime,1000);
+}
+clocktime();
+	</script>
+
+</body>
+</html>
